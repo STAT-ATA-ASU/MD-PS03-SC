@@ -254,7 +254,7 @@ This first set of questions will help you practice basic syntax.
 ```
 
 
-6. Calculate the **average** percentage of listings that were sold in Dallas **in each month of the year** based on your `dallas_sub` data set. Save the results of the calculation in a data frame called `dallas_summary` with the results in `mean_prct_sold`. 
+6. Calculate the **average** percentage of listings that were sold in Dallas **in each month of the years** based on your `dallas_sub` data set. Save the results of the calculation in a data frame called `dallas_summary` with the results in `mean_prct_sold`. 
 
 ```{r}
 # Type your code and comments inside the code chunk
