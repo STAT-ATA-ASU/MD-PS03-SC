@@ -14,6 +14,7 @@ output:
 
 ```{r include = FALSE}
 library(knitr)
+library(scales)
 knitr::opts_chunk$set(echo = TRUE, fig.align = "center", comment = NA, message = FALSE,  warning = FALSE)
 ```
 
@@ -54,14 +55,12 @@ These data are about housing in Texas. Each row is monthly data for a given city
 # Type your code and comments inside the code chunk
 
 
-
-
 ```
 
 <div id="answer">
 Type your complete sentence answer here using inline R code and delete this comment.
 
-
++ 
 
 </div>  
 
@@ -76,7 +75,7 @@ Type your complete sentence answer here using inline R code and delete this comm
 <div id="answer">
 Type your complete sentence answer here using inline R code and delete this comment.
 
-
++   
 
 </div> 
 
@@ -166,20 +165,22 @@ This code tells R to calculate the `mean` of the variable `sales`, and to save t
 You can also calculate multiple summary statistics at once, and even for multiple variables. Below we also calculate a standard deviation `sd()` of `sales`, a minimum `min()` of the `volume` variable, a maximum `max()` of the `volume` variable, etc. The `n()` calculates sample size...or the number of rows/ cases in the data frame. 
 
 ```{r}
-austin_12 %>% summarize(x_bar_sales = mean(sales), 
-                        sd_sales = sd(sales), 
-                        min_vol = min(volume), 
-                        max_vol = max(volume), 
-                        mdn_list = median(listings), 
-                        iqr_list = IQR(listings),
-                        sample_size = n())
+austin_12 %>% 
+  summarize(x_bar_sales = mean(sales), 
+            sd_sales = sd(sales), 
+            min_vol = min(volume), 
+            max_vol = max(volume), 
+            mdn_list = median(listings), 
+            iqr_list = IQR(listings),
+            sample_size = n()) -> ans1
+ans1
 ```
 
 Note that the names of the elements you calculate are  user defined, like `xbar_sales`, `min_vol`, and `mdn_list`. You could customize these names as you like (but don't use spaces in your names). 
 
 ## `arrange()`
 
-You just determined that the maximum volume of monthly sales in Austin in 2012 was a total of $791,281,075 ....but what if you wanted to know **WHAT MONTH** that occurred in? 
+You just determined that the maximum volume of monthly sales in Austin in 2012 was a total of `r dollar(ans1$max_vol)` ....but what if you wanted to know **WHAT MONTH** that occurred in? 
 
 ```{r}
 austin_12 %>%
@@ -231,7 +232,7 @@ This first set of questions will help you practice basic syntax.
 ```
 
 
-4. Make a data set called `dallas_sub` that includes data only from the city of Dallas in 2012 and 2013. 
+4. Make a data set called `dallas_sub` that includes data only from the city of Dallas in 2012 and 2013. Show the first six rows of `dallas_sub`. Display the last six rows of `dallas_sub`. 
 
 ```{r}
 # Type your code and comments inside the code chunk
@@ -242,19 +243,7 @@ This first set of questions will help you practice basic syntax.
 ```
 
 
-5. Add a column **to the `dallas_sub` data set** called `prct_sold` that calculates the percentage of `listings` that were `sold` (`sales/listings * 100`). Be sure to **save** the results also as a data frame called `dallas_sub`. 
-
-```{r}
-# Type your code and comments inside the code chunk
-
-
-
-
-
-```
-
-
-6. Calculate the **average** percentage of listings that were sold in Dallas **in each month of the years** based on your `dallas_sub` data set. Save the results of the calculation in a data frame called `dallas_summary` with the results in `mean_prct_sold`. 
+5. Add a column to the `dallas_sub` data set called `prct_sold` that calculates the percentage of `listings` that were `sold` (`sales/listings * 100`). Be sure to **save** the results into a data frame called `dallas_sub`. 
 
 ```{r}
 # Type your code and comments inside the code chunk
@@ -266,7 +255,19 @@ This first set of questions will help you practice basic syntax.
 ```
 
 
-7. Arrange the `dallas_summary` in `desc`ending order based on the average percentage of listings that were sold in Dallas in 2012, so you can see **which month** had the greatest percentage of houses sold in Dallas on average from 2012-2013.  You do not need to save the results. 
+6. Calculate the **average** percentage of listings that were sold in Dallas **in each month of the years** based on your `dallas_sub` data set. Save the results of the calculation in a data frame called `dallas_summary` with the results stored in `mean_prct_sold`. Print the results of `dallas_summary`. 
+
+```{r}
+# Type your code and comments inside the code chunk
+
+
+
+
+
+```
+
+
+7. Arrange the `dallas_summary` in `desc`ending order based on the average percentage of listings that were sold in Dallas, so you can see **which month** had the greatest percentage of houses sold in Dallas on average from 2012-2013.  You do not need to save the results. 
 
 ```{r}
 # Type your code and comments inside the code chunk
@@ -300,7 +301,7 @@ txhousing %>%
 <div id="answer">
 Type your complete sentence answer here using inline R code and delete this comment.
 
-
++   
 
 </div> 
 
@@ -318,8 +319,7 @@ Type your complete sentence answer here using inline R code and delete this comm
 <div id="answer">
 Type your complete sentence answer here using inline R code and delete this comment.
 
-
-
++   
 
 </div> 
 
@@ -332,18 +332,12 @@ Type your complete sentence answer here using inline R code and delete this comm
 # Type your code and comments inside the code chunk
 
 
-
-
-
-
-
 ```
 
 <div id="answer">
 Type your complete sentence answer here using inline R code and delete this comment.
 
-
-
++   
 
 </div> 
 

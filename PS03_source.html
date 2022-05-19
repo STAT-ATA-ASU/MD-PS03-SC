@@ -1640,7 +1640,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">Problem Set 03: Data Wrangling</h1>
 <h4 class="author">Your Name Goes Here</h4>
-<h4 class="date">Last compiled: May 18, 2022 at 11:03:58 AM</h4>
+<h4 class="date">Last compiled: May 19, 2022 at 11:16:12 AM</h4>
 
 </div>
 
@@ -1682,6 +1682,9 @@ $ date      &lt;dbl&gt; 2000.000, 2000.083, 2000.167, 2000.250, 2000.333, 2000.4
 <pre class="r"><code># Type your code and comments inside the code chunk</code></pre>
 <div id="answer">
 <p>Type your complete sentence answer here using inline R code and delete this comment.</p>
+<ul>
+<li></li>
+</ul>
 </div>
 <ol start="2" style="list-style-type: decimal">
 <li>Examine the variable descriptions by typing <code>?txhousing</code> in the <strong>console</strong>. What is the <code>listings</code> variable in this data set?</li>
@@ -1689,6 +1692,9 @@ $ date      &lt;dbl&gt; 2000.000, 2000.083, 2000.167, 2000.250, 2000.333, 2000.4
 <pre class="r"><code># Type your code and comments inside the code chunk</code></pre>
 <div id="answer">
 <p>Type your complete sentence answer here using inline R code and delete this comment.</p>
+<ul>
+<li></li>
+</ul>
 </div>
 <hr />
 </div>
@@ -2228,13 +2234,15 @@ head(txhousing)</code></pre>
   summarize(x_bar_sales = mean(sales))</code></pre>
 <p>This code tells R to calculate the <code>mean</code> of the variable <code>sales</code>, and to save the results in a variable called <code>x_bar_sales</code>.</p>
 <p>You can also calculate multiple summary statistics at once, and even for multiple variables. Below we also calculate a standard deviation <code>sd()</code> of <code>sales</code>, a minimum <code>min()</code> of the <code>volume</code> variable, a maximum <code>max()</code> of the <code>volume</code> variable, etc. The <code>n()</code> calculates sample size…or the number of rows/ cases in the data frame.</p>
-<pre class="r"><code>austin_12 %&gt;% summarize(x_bar_sales = mean(sales), 
-                        sd_sales = sd(sales), 
-                        min_vol = min(volume), 
-                        max_vol = max(volume), 
-                        mdn_list = median(listings), 
-                        iqr_list = IQR(listings),
-                        sample_size = n())</code></pre>
+<pre class="r"><code>austin_12 %&gt;% 
+  summarize(x_bar_sales = mean(sales), 
+            sd_sales = sd(sales), 
+            min_vol = min(volume), 
+            max_vol = max(volume), 
+            mdn_list = median(listings), 
+            iqr_list = IQR(listings),
+            sample_size = n()) -&gt; ans1
+ans1</code></pre>
 <div class="kable-table">
 <table>
 <colgroup>
@@ -2596,19 +2604,19 @@ results_ab</code></pre>
 </ol>
 <pre class="r"><code># Type your code and comments inside the code chunk</code></pre>
 <ol start="4" style="list-style-type: decimal">
-<li>Make a data set called <code>dallas_sub</code> that includes data only from the city of Dallas in 2012 and 2013.</li>
+<li>Make a data set called <code>dallas_sub</code> that includes data only from the city of Dallas in 2012 and 2013. Show the first six rows of <code>dallas_sub</code>. Display the last six rows of <code>dallas_sub</code>.</li>
 </ol>
 <pre class="r"><code># Type your code and comments inside the code chunk</code></pre>
 <ol start="5" style="list-style-type: decimal">
-<li>Add a column <strong>to the <code>dallas_sub</code> data set</strong> called <code>prct_sold</code> that calculates the percentage of <code>listings</code> that were <code>sold</code> (<code>sales/listings * 100</code>). Be sure to <strong>save</strong> the results also as a data frame called <code>dallas_sub</code>.</li>
+<li>Add a column to the <code>dallas_sub</code> data set called <code>prct_sold</code> that calculates the percentage of <code>listings</code> that were <code>sold</code> (<code>sales/listings * 100</code>). Be sure to <strong>save</strong> the results into a data frame called <code>dallas_sub</code>.</li>
 </ol>
 <pre class="r"><code># Type your code and comments inside the code chunk</code></pre>
 <ol start="6" style="list-style-type: decimal">
-<li>Calculate the <strong>average</strong> percentage of listings that were sold in Dallas <strong>in each month of the years</strong> based on your <code>dallas_sub</code> data set. Save the results of the calculation in a data frame called <code>dallas_summary</code> with the results in <code>mean_prct_sold</code>.</li>
+<li>Calculate the <strong>average</strong> percentage of listings that were sold in Dallas <strong>in each month of the years</strong> based on your <code>dallas_sub</code> data set. Save the results of the calculation in a data frame called <code>dallas_summary</code> with the results stored in <code>mean_prct_sold</code>. Print the results of <code>dallas_summary</code>.</li>
 </ol>
 <pre class="r"><code># Type your code and comments inside the code chunk</code></pre>
 <ol start="7" style="list-style-type: decimal">
-<li>Arrange the <code>dallas_summary</code> in <code>desc</code>ending order based on the average percentage of listings that were sold in Dallas in 2012, so you can see <strong>which month</strong> had the greatest percentage of houses sold in Dallas on average from 2012-2013. You do not need to save the results.</li>
+<li>Arrange the <code>dallas_summary</code> in <code>desc</code>ending order based on the average percentage of listings that were sold in Dallas, so you can see <strong>which month</strong> had the greatest percentage of houses sold in Dallas on average from 2012-2013. You do not need to save the results.</li>
 </ol>
 <pre class="r"><code># Type your code and comments inside the code chunk</code></pre>
 <hr />
@@ -2687,6 +2695,9 @@ results_ab</code></pre>
 </div>
 <div id="answer">
 <p>Type your complete sentence answer here using inline R code and delete this comment.</p>
+<ul>
+<li></li>
+</ul>
 </div>
 <ol start="9" style="list-style-type: decimal">
 <li>In January of 2015, what city had the fewest houses listed for sale?</li>
@@ -2694,6 +2705,9 @@ results_ab</code></pre>
 <pre class="r"><code># Type your code and comments inside the code chunk</code></pre>
 <div id="answer">
 <p>Type your complete sentence answer here using inline R code and delete this comment.</p>
+<ul>
+<li></li>
+</ul>
 </div>
 <ol start="10" style="list-style-type: decimal">
 <li>In 2012, in which month were the most houses sold in Texas?</li>
@@ -2701,6 +2715,9 @@ results_ab</code></pre>
 <pre class="r"><code># Type your code and comments inside the code chunk</code></pre>
 <div id="answer">
 <p>Type your complete sentence answer here using inline R code and delete this comment.</p>
+<ul>
+<li></li>
+</ul>
 </div>
 <ol start="11" style="list-style-type: decimal">
 <li>Generate a single table that shows the total number of houses sold in <strong>Austin</strong> in <strong>2000 and 2001</strong> (total over the entire period), &amp; the total number of houses sold in <strong>Dallas</strong> in <strong>2000 and 2001</strong> (total over the entire period). This calculation requires a number of steps, so it might help you to first write out on paper the different steps you will need to take. That will help you set out a “blueprint” for tackling the problem. <strong>Hint</strong>: recall the <code>sum()</code> function can add values.</li>
