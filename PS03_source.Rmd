@@ -48,6 +48,7 @@ glimpse(txhousing)
 
 These data are about housing in Texas. Each row is monthly data for a given city in Texas in a given year. There are multiple years of data for each city. 
 
+______________
 
 1. Examine `txhousing` in the data viewer. You can accomplish this two different ways: A) click on the name of the data in the Environment pane, or b) type `View(txhousing)` in the **console**. What is the last city listed in the data set (in row 8602)?
 
