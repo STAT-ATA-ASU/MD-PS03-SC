@@ -1640,7 +1640,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">Problem Set 03: Data Wrangling</h1>
 <h4 class="author">Your Name Goes Here</h4>
-<h4 class="date">Last compiled: May 26, 2022 at 07:48:41 AM</h4>
+<h4 class="date">Last compiled: July 18, 2022 at 09:32:37 AM</h4>
 
 </div>
 
@@ -1687,6 +1687,7 @@ $ date      &lt;dbl&gt; 2000.000, 2000.083, 2000.167, 2000.250, 2000.333, 2000.4
 <li></li>
 </ul>
 </div>
+<hr />
 <ol start="2" style="list-style-type: decimal">
 <li>Examine the variable descriptions by typing <code>?txhousing</code> in the <strong>console</strong>. What is the <code>listings</code> variable in this data set?</li>
 </ol>
@@ -2600,22 +2601,27 @@ results_ab</code></pre>
 <div id="basic-syntax" class="section level2" number="3.1">
 <h2><span class="header-section-number">3.1</span> Basic Syntax</h2>
 <p>This first set of questions will help you practice basic syntax.</p>
+<hr />
 <ol start="3" style="list-style-type: decimal">
 <li>Write a code chunk to remove the inventory variable. Save the results in a data frame called <code>txhousing</code>. Confirm in the data viewer that the variable has been removed.</li>
 </ol>
 <pre class="r"><code># Type your code and comments inside the code chunk</code></pre>
+<hr />
 <ol start="4" style="list-style-type: decimal">
 <li>Make a data set called <code>dallas_sub</code> that includes data only from the city of Dallas in 2012 and 2013. Show the first six rows of <code>dallas_sub</code>. Display the last six rows of <code>dallas_sub</code>.</li>
 </ol>
 <pre class="r"><code># Type your code and comments inside the code chunk</code></pre>
+<hr />
 <ol start="5" style="list-style-type: decimal">
 <li>Add a column to the <code>dallas_sub</code> data set called <code>prct_sold</code> that calculates the percentage of <code>listings</code> that were <code>sold</code> (<code>sales/listings * 100</code>). Be sure to <strong>save</strong> the results into a data frame called <code>dallas_sub</code>.</li>
 </ol>
 <pre class="r"><code># Type your code and comments inside the code chunk</code></pre>
+<hr />
 <ol start="6" style="list-style-type: decimal">
 <li>Calculate the <strong>average</strong> percentage of listings that were sold in Dallas <strong>in each month of the years</strong> based on your <code>dallas_sub</code> data set. Save the results of the calculation in a data frame called <code>dallas_summary</code> with the results stored in <code>mean_prct_sold</code>. Print the results of <code>dallas_summary</code>.</li>
 </ol>
 <pre class="r"><code># Type your code and comments inside the code chunk</code></pre>
+<hr />
 <ol start="7" style="list-style-type: decimal">
 <li>Arrange the <code>dallas_summary</code> in <code>desc</code>ending order based on the average percentage of listings that were sold in Dallas, so you can see <strong>which month</strong> had the greatest percentage of houses sold in Dallas on average from 2012-2013. You do not need to save the results.</li>
 </ol>
@@ -2625,6 +2631,7 @@ results_ab</code></pre>
 <div id="more-advanced-wrangling" class="section level2" number="3.2">
 <h2><span class="header-section-number">3.2</span> More Advanced Wrangling</h2>
 <p>Please answer the following questions with text and/or code where appropriate. You may have to use multiple <code>dplyr</code> functions to answer each question. Think through the steps of how to get to the answer you are trying to find.</p>
+<hr />
 <ol start="8" style="list-style-type: decimal">
 <li>Run the following code chunk. Study the code, and the output. Explain in your own words what this code chunk calculated.</li>
 </ol>
@@ -2700,6 +2707,7 @@ results_ab</code></pre>
 <li></li>
 </ul>
 </div>
+<hr />
 <ol start="9" style="list-style-type: decimal">
 <li>In January of 2015, what city had the fewest houses listed for sale?</li>
 </ol>
@@ -2710,6 +2718,7 @@ results_ab</code></pre>
 <li></li>
 </ul>
 </div>
+<hr />
 <ol start="10" style="list-style-type: decimal">
 <li>In 2012, in which month were the most houses sold in Texas?</li>
 </ol>
@@ -2720,6 +2729,7 @@ results_ab</code></pre>
 <li></li>
 </ul>
 </div>
+<hr />
 <ol start="11" style="list-style-type: decimal">
 <li>Generate a single table that shows the total number of houses sold in <strong>Austin</strong> in <strong>2000 and 2001</strong> (total over the entire period), &amp; the total number of houses sold in <strong>Dallas</strong> in <strong>2000 and 2001</strong> (total over the entire period). This calculation requires a number of steps, so it might help you to first write out on paper the different steps you will need to take. That will help you set out a “blueprint” for tackling the problem. <strong>Hint</strong>: recall the <code>sum()</code> function can add values.</li>
 </ol>

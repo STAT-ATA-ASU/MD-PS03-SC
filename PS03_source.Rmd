@@ -66,6 +66,8 @@ Type your complete sentence answer here using inline R code and delete this comm
 </div>  
 
 
+____________
+
 2. Examine the variable descriptions by typing `?txhousing` in the **console**. What is the `listings` variable in this data set?
 
 ```{r}
@@ -80,7 +82,7 @@ Type your complete sentence answer here using inline R code and delete this comm
 
 </div> 
 
-------
+____________
 
 # Data Wrangling Review
 
@@ -213,7 +215,7 @@ results_ab
 
 The mean number of sales for Abilene in January was `r round(results_ab$x_bar_sales[1],1)` homes. 
 
-***
+____________
 
 # Independent Practice 
 
@@ -221,6 +223,7 @@ The mean number of sales for Abilene in January was `r round(results_ab$x_bar_sa
 
 This first set of questions will help you practice basic syntax. 
 
+____________
 
 3. Write a code chunk to remove the inventory variable. Save the results in a data frame called `txhousing`. Confirm in the data viewer that the variable has been removed. 
 
@@ -232,6 +235,7 @@ This first set of questions will help you practice basic syntax.
 
 ```
 
+____________
 
 4. Make a data set called `dallas_sub` that includes data only from the city of Dallas in 2012 and 2013. Show the first six rows of `dallas_sub`. Display the last six rows of `dallas_sub`. 
 
@@ -243,6 +247,7 @@ This first set of questions will help you practice basic syntax.
 
 ```
 
+____________
 
 5. Add a column to the `dallas_sub` data set called `prct_sold` that calculates the percentage of `listings` that were `sold` (`sales/listings * 100`). Be sure to **save** the results into a data frame called `dallas_sub`. 
 
@@ -255,6 +260,7 @@ This first set of questions will help you practice basic syntax.
 
 ```
 
+____________
 
 6. Calculate the **average** percentage of listings that were sold in Dallas **in each month of the years** based on your `dallas_sub` data set. Save the results of the calculation in a data frame called `dallas_summary` with the results stored in `mean_prct_sold`. Print the results of `dallas_summary`. 
 
@@ -267,6 +273,7 @@ This first set of questions will help you practice basic syntax.
 
 ```
 
+____________
 
 7. Arrange the `dallas_summary` in `desc`ending order based on the average percentage of listings that were sold in Dallas, so you can see **which month** had the greatest percentage of houses sold in Dallas on average from 2012-2013.  You do not need to save the results. 
 
@@ -278,14 +285,13 @@ This first set of questions will help you practice basic syntax.
 
 ```
 
-
-
-***
+____________
 
 ## More Advanced Wrangling
 
 Please answer the following questions with text and/or code where appropriate. You may have to use multiple `dplyr` functions to answer each question. Think through the steps of how to get to the answer you are trying to find. 
 
+____________
 
 8. Run the following code chunk. Study the code, and the output. Explain in your own words what this code chunk calculated. 
 
@@ -306,6 +312,7 @@ Type your complete sentence answer here using inline R code and delete this comm
 
 </div> 
 
+____________
 
 9.  In January of 2015, what city had the fewest houses listed for sale? 
 
@@ -324,7 +331,7 @@ Type your complete sentence answer here using inline R code and delete this comm
 
 </div> 
 
-
+____________
 
 10. In 2012, in which month were the most houses sold in Texas? 
 
@@ -342,6 +349,7 @@ Type your complete sentence answer here using inline R code and delete this comm
 
 </div> 
 
+____________
 
 11. Generate a single table that shows the total number of houses sold in **Austin** in **2000 and 2001** (total over the entire period), & the total number of houses sold in **Dallas** in **2000 and 2001** (total over the entire period). This calculation requires a number of steps, so it might help you to first write out on paper the different steps you will need to take. That will help you set out a "blueprint" for tackling the problem. **Hint**: recall the `sum()` function can add values. 
 
@@ -354,4 +362,4 @@ Type your complete sentence answer here using inline R code and delete this comm
 
 ```
 
-***
+____________
