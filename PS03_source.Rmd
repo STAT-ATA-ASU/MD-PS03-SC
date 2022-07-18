@@ -12,6 +12,8 @@ output:
     css: MyLab.css 
 ---
 
+____________
+
 ```{r include = FALSE}
 library(knitr)
 library(scales)
