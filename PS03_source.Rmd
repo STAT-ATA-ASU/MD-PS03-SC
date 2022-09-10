@@ -52,7 +52,7 @@ These data are about housing in Texas. Each row is monthly data for a given city
 
 ______________
 
-1. Examine `txhousing` in the data viewer. You can accomplish this two different ways: A) click on the name of the data in the Environment pane, or b) type `View(txhousing)` in the **console**. What is the last city listed in the data set (in row 8602)?
+1. Examine `txhousing` in the data viewer. You can accomplish this two different ways: A) click on the name of the data in the Environment pane, or b) type `View(txhousing)` in the **console**. What is the last city listed in the data set (in row 8602)? Use R code to programatically find the last city in `txhousing`.
 
 ```{r}
 # Type your code and comments inside the code chunk
@@ -71,11 +71,6 @@ Type your complete sentence answer here using inline R code and delete this comm
 ____________
 
 2. Examine the variable descriptions by typing `?txhousing` in the **console**. What is the `listings` variable in this data set?
-
-```{r}
-# Type your code and comments inside the code chunk
-
-```
 
 <div id="answer">
 Type your complete sentence answer here using inline R code and delete this comment.
@@ -227,7 +222,7 @@ This first set of questions will help you practice basic syntax.
 
 ____________
 
-3. Write a code chunk to remove the inventory variable. Save the results in a data frame called `txhousing`. Confirm in the data viewer that the variable has been removed. 
+3. Write a code chunk to remove the inventory variable. Save the results in a data frame called `txhousing`. Confirm the variable `inventory` has been removed. 
 
 ```{r}
 # Type your code and comments inside the code chunk
@@ -239,7 +234,7 @@ ____________
 
 ____________
 
-4. Make a data set called `dallas_sub` that includes data only from the city of Dallas in 2012 and 2013. Show the first six rows of `dallas_sub`. Display the last six rows of `dallas_sub`. 
+4. Make a data set called `dallas_sub` that includes data only from the city of Dallas in 2012 and 2013. Show the first six rows of `dallas_sub`. Display the first six rows of `dallas_sub`. 
 
 ```{r}
 # Type your code and comments inside the code chunk
@@ -251,7 +246,7 @@ ____________
 
 ____________
 
-5. Add a column to the `dallas_sub` data set called `prct_sold` that calculates the percentage of `listings` that were `sold` (`sales/listings * 100`). Be sure to **save** the results into a data frame called `dallas_sub`. 
+5. Add a column to the `dallas_sub` data set called `prct_sold` that calculates the percentage of `listings` that were `sold` (`sales/listings * 100`). Be sure to **save** the results into a data frame called `dallas_sub`.  Display the last six rows of `dallas_sub`. 
 
 ```{r}
 # Type your code and comments inside the code chunk
@@ -264,7 +259,7 @@ ____________
 
 ____________
 
-6. Calculate the **average** percentage of listings that were sold in Dallas **in each month of the years** based on your `dallas_sub` data set. Save the results of the calculation in a data frame called `dallas_summary` with the results stored in `mean_prct_sold`. Print the results of `dallas_summary`. 
+6. Calculate the **average** percentage of listings that were sold in Dallas **in each month of the years** based on your `dallas_sub` data set. Save the results of the calculation in a data frame called `dallas_summary` with the results stored in `mean_prct_sold`. Display the results of `dallas_summary`. 
 
 ```{r}
 # Type your code and comments inside the code chunk
@@ -295,7 +290,7 @@ Please answer the following questions with text and/or code where appropriate. Y
 
 ____________
 
-8. Run the following code chunk. Study the code, and the output. Explain in your own words what this code chunk calculated. 
+8. Run the following code chunk. Study the code, and the output. Explain in your own words what this code chunk calculated. Specifically, compare this code to the code in Problems 4 through 7.  
 
 ```{r}
 txhousing %>% 
@@ -316,7 +311,7 @@ Type your complete sentence answer here using inline R code and delete this comm
 
 ____________
 
-9.  In January of 2015, what city had the fewest houses listed for sale? 
+9.  In January of 2015, what city had the fewest houses listed for sale? Report the city and the number of houses said city had listed for sale using inline R code. 
 
 ```{r}
 # Type your code and comments inside the code chunk
@@ -335,7 +330,7 @@ Type your complete sentence answer here using inline R code and delete this comm
 
 ____________
 
-10. In 2012, in which month were the most houses sold in Texas? 
+10. In 2012, in which month were the most houses sold in Texas? Report the month were the most houses sold in Texas and the number of houses sold for that month using inline R code.
 
 
 ```{r}
@@ -353,7 +348,7 @@ Type your complete sentence answer here using inline R code and delete this comm
 
 ____________
 
-11. Generate a single table that shows the total number of houses sold in **Austin** in **2000 and 2001** (total over the entire period), & the total number of houses sold in **Dallas** in **2000 and 2001** (total over the entire period). This calculation requires a number of steps, so it might help you to first write out on paper the different steps you will need to take. That will help you set out a "blueprint" for tackling the problem. **Hint**: recall the `sum()` function can add values. 
+11. Generate a **single** table that shows the total number of houses sold in **Austin** in **2000 and 2001** (total over the entire period), & the total number of houses sold in **Dallas** in **2000 and 2001** (total over the entire period). This calculation requires a number of steps, so it might help you to first write out on paper the different steps you will need to take. That will help you set out a "blueprint" for tackling the problem. **Hint**: recall the `sum()` function can add values. 
 
 ```{r}
 # Type your code and comments inside the code chunk
