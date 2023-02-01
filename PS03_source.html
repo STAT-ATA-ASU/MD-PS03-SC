@@ -1502,8 +1502,8 @@ pre code {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -1511,16 +1511,9 @@ pre code {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -1640,7 +1633,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">Problem Set 03: Data Wrangling</h1>
 <h4 class="author">Your Name Goes Here</h4>
-<h4 class="date">Last compiled: September 10, 2022 at 07:05:06 AM</h4>
+<h4 class="date">Last compiled: February 01, 2023 at 09:51:27 AM</h4>
 
 </div>
 
