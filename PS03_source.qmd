@@ -246,7 +246,11 @@ Write a code chunk to remove the inventory variable. Save the results in a data 
 :::
 
 ::: {.callout-note icon="false" title="Problem 4"}
-Make a data set called `dallas_sub` that includes data only from the city of Dallas in 2012 and 2013. Show the first six rows of `dallas_sub`.
+Make a data set called `dallas_sub` that includes data only from the city of Dallas in 2012 and 2013. Verify that the dimensions of `dallas_sub` are 24 by 8.  Show the first six rows of `dallas_sub`.  Explain why the following code does not give the requested answer:
+```{r, eval = FALSE}
+txhousing |> 
+  filter(city =="Dallas" & year == 2012 | year == 2013) |> dim()
+```
 :::
 
 ::: {.callout-important icon="false" collapse="false" title="Problem 4 Answers"}
@@ -304,7 +308,8 @@ txhousing |>
   mutate(prct_sold = sales/listings *100) |>
   group_by(month) |>
   summarize(mean_prct_sold = mean(prct_sold)) |> 
-  arrange(desc(mean_prct_sold))
+  arrange(desc(mean_prct_sold)) |> 
+  kable()
 ```
 
 -   Delete this and put your text answer here.
